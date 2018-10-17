@@ -7,7 +7,7 @@ import java.util.Objects;
 /**
  * Created by pjvilloud on 21/09/17.
  */
-public class Employe {
+public abstract class Employe {
     private String nom;
     private String prenom;
     private String matricule;
@@ -33,12 +33,14 @@ public class Employe {
         return LocalDate.now().getYear() - annee;
     }
 
+    public abstract Double getPrimeAnnuelle();
+
     public void augmenterSalaire(Double augmentation){
-        Double newSalaire = this.getSalaire() + this.getSalaire() * augmentation;
+        Double newSalaire = this.getSalaire() * (1 + augmentation);
         this.setSalaire(newSalaire);
     }
 
-    public static final Integer getNbConges(){
+    public Integer getNbConges(){
         return Entreprise.NB_CONGES_BASE;
     }
 
@@ -54,9 +56,6 @@ public class Employe {
         if(d.getClass() != this.getClass()) return false;
         Employe autreEmploye = (Employe)d;
         return this.toString().equals(autreEmploye.toString());
-        /*return this.nom == autreEmploye.nom && this.prenom == autreEmploye.prenom
-                && this.matricule == autreEmploye.matricule && this.salaire == autreEmploye.salaire
-                && this.dateEmbauche.equals(autreEmploye.dateEmbauche);*/
     }
 
     @Override

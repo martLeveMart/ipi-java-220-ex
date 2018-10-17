@@ -8,7 +8,7 @@ import org.joda.time.LocalDate;
 public class main {
     public static void main(String[] args){
         Entreprise A = new Entreprise();
-        Employe employe = new Employe("thomas", "Partson", "ATV56", LocalDate.now(), 1633.3);
+        //Employe employe = new Employe("thomas", "Partson", "ATV56", LocalDate.now(), 1633.3);
 
         //System.out.println();
     }

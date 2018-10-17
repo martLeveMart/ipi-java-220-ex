@@ -12,7 +12,7 @@ public class Entreprise {
     public static final Double PRIME_MANAGER_PAR_TECHNICIEN = 250.0;
     public static final Double PRIME_ANCIENNETE = 100.0;
 
-    public static Double primeAnnuelleBase (){
+    public static Double getPrimeAnnuelleBase (){
         Integer annee = LocalDate.now().getYear();
         Double prime = annee.doubleValue()/2;
         return prime;
