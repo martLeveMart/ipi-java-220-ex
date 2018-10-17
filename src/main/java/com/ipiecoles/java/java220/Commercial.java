@@ -64,7 +64,7 @@ public class Commercial extends Employe{
         if(o.getClass() != this.getClass()) return false;
         if(super.equals(o)){
             Commercial autreCom = (Commercial)o;
-            return this.caAnnuel.equals(autreCom.caAnnuel) && this.performance.equals(autreCom.performance);
+            return this.caAnnuel.equals(autreCom.caAnnuel);
         }else{
             return false;
         }

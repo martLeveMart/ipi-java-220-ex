@@ -21,7 +21,7 @@ public class Technicien extends Employe {
 
     //listes méthodes de la classe
     public Double getPrimeAnnuelle() {
-        Double primeBase = Entreprise.getPrimeAnnuelleBase();
+        Double primeBase = Entreprise.primeAnnuelleBase();
         Double prime = primeBase + primeBase + this.getNombreAnneeAnciennete() * this.BONUS_ANCIENNETE;
         prime += primeBase * (this.grade / 10.0);
         return prime;
